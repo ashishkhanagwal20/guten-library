@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #6358DC;      /* Primary purple */
+  --secondary-color: #E8E7FF;    /* Light purple for hover states */
+  --tertiary-color: #F8F7FF;     /* Very light purple background */
+  --dark-color: #333333;         /* Dark text color */
+  --light-color: #FFFFFF;        /* White background for cards */
+  --border-color: #EFEFEF;       /* Light borders */
+  --error-color: #FF6565;        /* Error messages */
+  --success-color: #4BB543;      /* Success messages */
+} 

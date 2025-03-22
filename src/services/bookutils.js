@@ -1,18 +1,38 @@
-export const categories = ["Fiction","Drama","Humor","Politics","Philosophy","History","Adventure","Mystery"];
-    
-export const getViewableBookLink = (book) =>{
-    if(!book?.formats) return null;
+/**
+ * List of categories for the app
+ */
+export const categories = [
+  "Fiction",
+  "Philosophy",
+  "Drama",
+  "History",
+  "Humour",
+  "Adventure",
+  "Politics",
+];
 
-    const formatpriority = ["text/html","application/pdf","text/plain"];
 
-    // check for format in order of priority
+/**
+ * Gets the best viewable format URL for a book in priority order: HTML > PDF > TXT
+ */
+export const getViewableBookLink = (book) => {
+  if (!book?.formats) return null;
 
-    for(const formatType of formatpriority){
-        for(const [mime,url] of Object.entries(book.formats)){
-            if(url.endsWith('.zip')) continue; //skipping zip files
+  // Priority order for formats
+  const formatPriority = ["text/html", "application/pdf", "text/plain"];
 
-            if(mime.startsWith(formatType)) return url;
-        }
+  // Check each format type in order of priority
+  for (const formatType of formatPriority) {
+    for (const [mime, url] of Object.entries(book.formats)) {
+      // Skip zip files (not viewable)
+      if (url.endsWith(".zip")) continue;
+
+      // Return the first matching format based on priority
+      if (mime.startsWith(formatType)) return url;
     }
-    return null; //when no viewable format found
-}
+  }
+
+  return null; // No viewable format found
+};
+
+

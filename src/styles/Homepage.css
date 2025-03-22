@@ -1,0 +1,180 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  background: url('../assets/New Assets/Pattern.svg') repeat-x top, #F8F7FF;
+  background-size: contain;
+}
+
+.app-title {
+  font-size: 48px;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: left;
+  font-weight: 600;
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-description {
+  font-size: 16px;
+  color: var(--dark-color);
+  text-align: left;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  grid-auto-rows: 50px;
+}
+
+.category-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 50px;
+  font-size: 16px;
+  background-color: var(--light-color) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  color: var(--dark-color) !important;
+  font-weight: 500;
+}
+
+.category-button:hover {
+  background-color: var(--secondary-color) !important;
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.category-text {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+}
+
+.category-arrow {
+  width: 24px;
+  height: 24px;
+  background: url('../assets/New Assets/Next.svg') no-repeat center;
+  background-size: contain;
+}
+
+.fiction-icon {
+  background: url('../assets/New Assets/Fiction.svg') no-repeat center;
+  background-size: contain;
+}
+
+.drama-icon {
+  background: url('../assets/New Assets/Drama.svg') no-repeat center;
+  background-size: contain;
+}
+
+.humour-icon {
+  background: url('../assets/New Assets/Humour.svg') no-repeat center;
+  background-size: contain;
+}
+
+.politics-icon {
+  background: url('../assets/New Assets/Politics.svg') no-repeat center;
+  background-size: contain;
+}
+
+.philosophy-icon {
+  background: url('../assets/New Assets/Philosophy.svg') no-repeat center;
+  background-size: contain;
+}
+
+.history-icon {
+  background: url('../assets/New Assets/History.svg') no-repeat center;
+  background-size: contain;
+}
+
+.adventure-icon {
+  background: url('../assets/New Assets/Adventure.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .app-title {
+    font-size: 42px;
+    max-width: 700px;
+  }
+  
+  .categories-container {
+    max-width: 700px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 36px;
+    margin-top: 3rem;
+    max-width: 500px;
+  }
+  
+  .app-description {
+    max-width: 80%;
+    margin-bottom: 30px;
+  }
+  
+  .categories-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 32px;
+    margin-top: 2rem;
+    width: 90%;
+  }
+  
+  .app-description {
+    font-size: 14px;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  
+  .categories-container {
+    width: 90%;
+    padding: 5px;
+  }
+  
+  .category-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+} 
